@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.5s;
+}
+
+.light-theme {
+  --bx-shadw: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+    -10px -10px 10px -1px rgba(255, 255, 255, 0.7);
+  --inset: inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+    inset -10px -10px 10px -1px rgba(255, 255, 255, 0.7);
+  --bg: #ccc;
+  --color: #222222;
+}
+
+.dark-theme {
+  --bx-shadw: 0.4rem 0.4rem 1rem #111, -0.4rem -0.4rem 1rem #333;
+  --inset: 0.4rem 0.4rem 1rem #111 inset, -0.4rem -0.4rem 1rem #333 inset;
+  --bg: #222;
+  --color: #ffffff;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  color: var(--color);
+  font-size: 25px;
+  box-shadow: var(--bx-shadw);
+}
+
+.title {
+  box-shadow: var(--inset);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.title:hover {
+  box-shadow: var(--bx-shadw);
+}
+
+.toggle-btn {
+  box-shadow: var(--inset);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+.toggle-btn:hover {
+  box-shadow: var(--bx-shadw);
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form input {
+  width: 80%;
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: var(--inset);
+  background: transparent;
+  color: var(--color);
+}
+
+#savebtn {
+  /* border-radius: 5px; */
+  /* width: 100%; */
+  border-radius: 50%;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  outline: 0;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: var(--inset);
+  background: transparent;
+  color: var(--color);
+}
+
+.listgroup {
+  max-width: 400px;
+  margin: auto;
+}
+
+.listgroup .listitem {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  justify-content: space-between;
+  background: transparent;
+  padding: 10px;
+  box-shadow: var(--inset);
+  color: var(--color);
+}
+
+.listgroup .listitem .btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.listgroup .listitem .editbtn {
+  box-shadow: var(--inset);
+  border: 0;
+  outline: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  color: gold;
+}
+
+.listgroup .listitem .dltbtn {
+  box-shadow: var(--inset);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  cursor: pointer;
+  color: crimson;
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding-inline: 20px;
+  }
+
+  .listgroup {
+    padding-inline: 20px;
+  }
+
+  * {
+    font-size: 16px;
+  }
+}
